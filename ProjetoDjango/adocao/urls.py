@@ -6,6 +6,6 @@ from .views import *
 
 urlpatterns = [
     #path('caminho/da/url', ClasseDoView.as_view(), name="nomeDaUrl")
-	path('inicio', PaginaInicialView.as_view(), name="index"),
+	path('', PaginaInicialView.as_view(), name="index"),
     path('sobre', PaginaSobreView.as_view(), name="sobre"),
 ]
