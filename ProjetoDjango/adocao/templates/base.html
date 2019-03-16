@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +31,8 @@
     <span class="site-heading-lower">Coffe</span>
   </h1>
 
-  <!-- Navigation -->
+{% block menu %}
+  <!-- Navigation - todo o conteudo das sessoes do site -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
       <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
@@ -58,6 +60,9 @@
     </div>
   </nav>
 
+  {% endblock %}
+
+{% block sessions %}
   <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
@@ -86,22 +91,32 @@
               <span class="section-heading-upper">Our Promise</span>
               <span class="section-heading-lower">To You</span>
             </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+            <p class="mb-0">When you walk into our shop to start your day,
+              we are dedicated to providing you with friendly service, a welcoming
+               atmosphere, and above all else, excellent products made with
+               the highest quality ingredients. If you are not satisfied, please
+                let us know and we will do whatever we can to make things right!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+{% endblock %}
 
+{% block rodape %}
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2019</p>
     </div>
   </footer>
+{% endblock %}
 
+{% block js %}
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.js' %}"></script>
+
+{% endblock %}
 
 </body>
 
